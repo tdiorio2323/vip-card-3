@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
         }}
       >
         <h1 className="text-7xl md:text-9xl font-black tracking-tighter uppercase holographic-text">
-          TD STUDIOS
+          CABANA
         </h1>
         <p className="mt-4 text-lg md:text-xl text-neutral-300 tracking-wide font-light">
           Luxury. Exclusivity. Connection.
