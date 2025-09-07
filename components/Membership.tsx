@@ -28,6 +28,30 @@ const membershipTiers = [
     cta: 'Become an Icon',
     glowClasses: 'from-[var(--brand-red)] to-fuchsia-600',
   },
+  {
+    name: 'Creator',
+    description: 'The essential Cabana experience.',
+    features: [
+      'Access to all club spaces',
+      'Priority event invitations',
+      'Creator networking portal',
+      'Complimentary welcome beverage',
+    ],
+    cta: 'Select Creator',
+    glowClasses: 'from-amber-400 to-yellow-600',
+  },
+  {
+    name: 'Icon',
+    description: 'Unparalleled luxury and access.',
+    features: [
+      'All Creator benefits',
+      'Exclusive VIP lounge access',
+      'Private concierge service',
+      'Guaranteed reservations',
+    ],
+    cta: 'Become an Icon',
+    glowClasses: 'from-[var(--brand-red)] to-fuchsia-600',
+  },
 ];
 
 const CheckIcon: React.FC = () => (
@@ -49,9 +73,9 @@ const Membership: React.FC = () => {
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {membershipTiers.map((tier) => (
-            <div key={tier.name} className="group relative">
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {membershipTiers.map((tier, index) => (
+            <div key={`${tier.name}-${index}`} className="group relative">
                 <div className={cn(
                     "absolute -inset-0.5 bg-gradient-to-r rounded-2xl blur opacity-20 group-hover:opacity-75 transition duration-1000 group-hover:duration-200",
                     tier.glowClasses
