@@ -47,16 +47,16 @@ const Waitlist: React.FC = () => {
 
                 <form action="/api/vip-waitlist" method="post" className="mt-8 space-y-4">
                     <div>
-                        <label htmlFor="name" className="sr-only">Full name</label>
-                        <input name="name" id="name" aria-label="Full name" placeholder="Your full name" required className="w-full rounded-lg bg-white/5 px-4 py-3 text-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-fuchsia-500 transition" />
+                        <label htmlFor="name-client" className="sr-only">Full name</label>
+                        <input name="name" id="name-client" aria-label="Full name" placeholder="Your full name" required className="w-full rounded-lg bg-white/5 px-4 py-3 text-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-fuchsia-500 transition" />
                     </div>
                     <div>
-                        <label htmlFor="email" className="sr-only">Email address</label>
-                        <input name="email" id="email" type="email" aria-label="Email" placeholder="Your primary email" required className="w-full rounded-lg bg-white/5 px-4 py-3 text-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-fuchsia-500 transition" />
+                        <label htmlFor="email-client" className="sr-only">Email address</label>
+                        <input name="email" id="email-client" type="email" aria-label="Email" placeholder="Your primary email" required className="w-full rounded-lg bg-white/5 px-4 py-3 text-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-fuchsia-500 transition" />
                     </div>
                     <div>
-                        <label htmlFor="reason" className="sr-only">Reason for joining</label>
-                        <textarea name="reason" id="reason" aria-label="Reason for joining (Optional)" placeholder="Tell us why you’d be a great fit…" rows={3} className="w-full rounded-lg bg-white/5 px-4 py-3 text-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-fuchsia-500 transition" />
+                        <label htmlFor="reason-client" className="sr-only">Reason for joining</label>
+                        <textarea name="reason" id="reason-client" aria-label="Reason for joining (Optional)" placeholder="Tell us why you’d be a great fit…" rows={3} className="w-full rounded-lg bg-white/5 px-4 py-3 text-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-fuchsia-500 transition" />
                     </div>
                     
                     {/* Honeypot: not visible to users */}
