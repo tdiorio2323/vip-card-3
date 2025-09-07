@@ -13,11 +13,11 @@ const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseClasses =
-    'inline-flex items-center justify-center rounded-lg font-semibold tracking-wide transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0A0A] focus-visible:ring-fuchsia-500 disabled:pointer-events-none disabled:opacity-50';
+    'inline-flex items-center justify-center rounded-xl font-semibold tracking-wide transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0A0A] focus-visible:ring-[var(--brand-red)] disabled:pointer-events-none disabled:opacity-50';
 
   const variantClasses = {
-    primary: 'bg-gradient-to-r from-fuchsia-500 to-rose-500 text-white hover:opacity-90',
-    outline: 'bg-white/10 text-white hover:bg-white/20',
+    primary: 'bg-[var(--brand-red)] text-white hover:opacity-90 shadow-[var(--glow-shadow)]',
+    outline: 'border border-white/20 bg-transparent hover:bg-white/10 text-white',
     ghost: 'hover:bg-white/10 text-white',
   };
 
