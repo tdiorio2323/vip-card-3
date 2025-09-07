@@ -4,6 +4,8 @@ import Button from './ui/Button';
 import Input from './ui/Input';
 import Label from './ui/Label';
 import Textarea from './ui/Textarea';
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import { cn } from '../lib/utils';
 
 const Waitlist: React.FC = () => {
     const [name, setName] = useState('');
@@ -12,6 +14,8 @@ const Waitlist: React.FC = () => {
     const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
     const [error, setError] = useState('');
     const nameInputRef = useRef<HTMLInputElement>(null);
+    const sectionRef = useRef<HTMLElement>(null);
+    const isVisible = useIntersectionObserver(sectionRef, { threshold: 0.2, triggerOnce: true });
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -38,7 +42,14 @@ const Waitlist: React.FC = () => {
     };
 
     return (
-        <section id="waitlist-section" className="py-20 sm:py-32 px-4 bg-[#0A0A0A]">
+        <section 
+            id="waitlist-section" 
+            ref={sectionRef}
+            className={cn(
+                "py-20 sm:py-32 px-4 bg-[#0A0A0A] transition-all duration-1000 ease-out",
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            )}
+        >
             <div className="max-w-7xl mx-auto">
                 <div className="text-center max-w-2xl mx-auto">
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white">
