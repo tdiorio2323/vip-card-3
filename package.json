@@ -10,6 +10,7 @@
     "seed": "tsx server/scripts/seed.ts"
   },
   "dependencies": {
+    "@google/genai": "^1.16.0",
     "@prisma/client": "5.17.0",
     "@resvg/resvg-js": "^2.6.2",
     "express": "^4.19.2",
